@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a class="aid" href="https://www.google.com">Google</a>
+    <button onclick="my_attribute()">
+        Click
+    </button>
+
+    <script>
+        var a = false;
+        function my_attribute()
+        {
+           // document.getElementsByClassName("aid")[0].innerHTML="YouTube";
+            
+            if(a == false)
+            {
+                document.getElementsByTagName("a")[0].innerHTML = "youtube";
+            document.getElementsByTagName("a")[0].setAttribute("href","https://www.youtube.com");
+            }
+            else{
+                document.getElementsByTagName("a")[0].innerHTML = "google";
+            document.getElementsByTagName("a")[0].setAttribute("href","https://www.google.com");
+
+            }
+            a = !a;
+        }
+
+    </script>
+</body>
+</html>

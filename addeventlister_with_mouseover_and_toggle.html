@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Hello</h1>
+
+
+<h2>Hello</h2>
+    <script>
+    document.getElementsByTagName("h1")[0].addEventListener("mouseover",myfun);
+
+    function myfun()
+       {
+         
+            document.getElementsByTagName("h1")[0].innerHTML="Welcome";
+        
+       }     
+       var b=false;  
+       document.getElementsByTagName("h2")[0].addEventListener("mouseover",myfun1);
+
+        function myfun1()
+        {
+
+            if(b==true)
+            {
+                document.getElementsByTagName("h2")[0].innerHTML="Welcome";
+            }
+            else{
+                document.getElementsByTagName("h2")[0].innerHTML="Hello";
+            }
+              b = !b;
+        }       
+
+    </script>
+</body>
+</html>

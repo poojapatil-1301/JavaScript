@@ -1,0 +1,46 @@
+<html>
+<head>
+   <title>Document</title>
+</head>
+<body>
+    
+    Enter Your Height :- <input type="text" name="" id="txtheight"><br><br>
+    Enter Your Weight :- <input type="text" name="" id="txtweight"><br><br>
+    <button onclick="btnclick()">Calculate</button>  
+
+    <h1>Result :- <span class="resclass"></span></span>
+    <h1 ></h1>
+
+    <script>
+     
+       function btnclick()
+       {
+        var h=document.getElementById("txtheight").value;
+        var w=document.getElementById("txtweight").value;
+       
+       var bmi=w/(h*h);
+       var c=Math.ceil(bmi);
+        //    alert(c);
+
+        var normal="Your bmi is :"+c+" You are Normal";
+        var overweight="Your bmi is :"+c+" You are Overweight";
+        var underweight="Your bmi is :"+c+" You are Underweight";
+
+        if(c<18)
+        {  
+          document.getElementsByClassName("resclass")[0].innerHTML=underweight;
+        }
+        else if(c>18 && c<25)
+        {            
+          document.getElementsByClassName("resclass")[0].innerHTML=normal;
+        }
+        else{  
+            document.getElementsByClassName("resclass")[0].innerHTML=overweight;
+        }
+        // document.getElementsByClassName("resclass")[0].innerHTML=c;
+
+
+       }
+    </script>
+</body>
+</html>
